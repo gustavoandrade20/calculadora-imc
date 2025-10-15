@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #0a1128;
+    --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+    --tertiary-color: #191970;
+
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family:  'Open Sans' , sans-serif;
+}
+
+.container {
+    max-width: 640px;
+    margin: 10vh auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+#form {
+    margin-top:  50px;
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+#form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+
+}
+
+#form input:focus {
+    outline: 1px solid var(--secondary-color);
+}
+
+#form label {
+    margin: 15px;
+    text-align:left;
+}
+
+.enviar {
+    margin-top:  25px;
+    font-size: 20px;
+    font-weight: 700;
+    height: 30px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: var(--secondary-color);
+}
+
+.enviar:active {
+    background-color: var(--tertiary-color);
+}
+
+.paragrafo-resultado {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--white-color);
+}
+
+.bad {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    color: var(--white-color);
+}
