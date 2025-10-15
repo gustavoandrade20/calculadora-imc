@@ -21,8 +21,12 @@ form.addEventListener('submit', function (event) {
 
     const imc = getImc(peso, altura);
     const nivelImc = getNivelImc(imc);
+    const dica = getDica(nivelImc);
 
-    const msg = `Seu IMC é ${imc} (${nivelImc}).`;
+    const msg = `<br>Seu IMC é ${imc} (${nivelImc}).<br>
+    <br>
+    ${dica}`;
+
     // setResultado(msg, true);
 
 
@@ -56,9 +60,22 @@ function getNivelImc(imc) {
     }
 
     if (imc < 18.5) {
-        return nivel[0];
+
+        return nivel[0] 
     }
 
+}
+
+function getDica(nivel) {
+  const dicas = {
+    'Abaixo do peso': 'Procure aumentar a ingestão de alimentos saudáveis e praticar exercícios de fortalecimento. Consulte um nutricionista para ajustar sua dieta.',
+    'Peso normal': 'Parabéns! Continue mantendo uma alimentação equilibrada e praticando atividades físicas regularmente.',
+    'Sobrepeso': 'Evite alimentos ultraprocessados e tente incluir mais frutas e verduras nas refeições. Caminhadas diárias já ajudam bastante!',
+    'Obesidade grau 1': 'Busque acompanhamento médico e adote hábitos saudáveis de forma gradual. Pequenas mudanças geram grandes resultados.',
+    'Obesidade grau 2': 'Procure um nutricionista e pratique atividades físicas leves. Cuidar da saúde é um passo de cada vez.',
+    'Obesidade grau 3': 'É importante procurar acompanhamento médico. Mudanças na rotina e alimentação podem melhorar muito sua qualidade de vida.'
+  };
+  return dicas[nivel];
 }
 
 function getImc(peso, altura) {

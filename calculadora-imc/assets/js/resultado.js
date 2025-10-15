@@ -1,8 +1,10 @@
+
 const resultado = document.querySelector('#resultado');
 const msg = localStorage.getItem('imcResultado');
 
 if (msg) {
-    resultado.textContent = msg;
+resultado.innerHTML = msg; // ✅ usa innerHTML para interpretar o <br>
 } else {
-    resultado.textContent = "Nenhum resultado encontrado.";
+resultado.textContent = "Nenhum resultado encontrado.";
 }
+

@@ -22,7 +22,17 @@ body {
     background-color: var(--primary-color);
     color: var(--white-color);
     font-family:  'Open Sans' , sans-serif;
+    
+
 }
+
+input, button {
+  border-radius: 10px;
+}
+ 
+form {
+  border-radius: 20px; 
+}  
 
 .container {
     max-width: 640px;
@@ -35,6 +45,7 @@ body {
     margin-top:  50px;
     display: flex;
     flex-flow: column wrap;
+ 
 
 }
 
